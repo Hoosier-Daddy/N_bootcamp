@@ -1,0 +1,14 @@
+body {
+	background-color: aqua;
+	background-image: linear-gradient(to right, #093028, #237a57);
+}
+
+.container {
+	box-shadow: 6px 6px 10px 1px rgba(150, 147, 147, 0.1);
+	padding: 0;
+}
+
+.container:hover {
+	transform: scale(1.01);
+	transition: 0.2s;
+}
