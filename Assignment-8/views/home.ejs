@@ -1,0 +1,32 @@
+<%- include('./partials/header')%>
+    <%- include('./partials/navbar')%>
+
+        <div class="container">
+            <h1>All Blogs!</h1>
+
+            <div class="list-group">
+                <% for(blog of blogs){ %>
+
+                    <a href=<%=`/blogs/${blog._id}` %> class="list-group-item list-group-item-action ">
+                        <h5 class="mb-1">
+                            <%=blog.title%>
+                        </h5>
+
+
+                        <small>Written by <strong>
+                                <%=blog.author%>
+                            </strong></small>
+                        <p class="mb-1">
+                            <%=blog.description.substring(0,30)%>...
+                        </p>
+
+                    </a>
+                    <% }%>
+            </div>
+
+
+        </div>
+
+
+
+        <%- include('./partials/footer')%>

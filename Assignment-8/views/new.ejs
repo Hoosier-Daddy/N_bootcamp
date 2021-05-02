@@ -1,0 +1,23 @@
+<%- include('./partials/header')%>
+    <%- include('./partials/navbar')%>
+
+        <div class="container mt-3">
+            <form action="/blogs" method="POST">
+                <div class="form-group">
+                    <label for="blog-title">Blog Title</label>
+                    <input type="text" class="form-control" id="blog-title" name='blog[title]'>
+
+                </div>
+                <div class="form-group">
+                    <label for="author">Author Name</label>
+                    <input type="text" class="form-control" id="author" name='blog[author]'>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" id="description" name='blog[description]'>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <%- include('./partials/footer')%>

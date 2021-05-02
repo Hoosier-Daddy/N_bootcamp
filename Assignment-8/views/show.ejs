@@ -1,0 +1,32 @@
+<%- include('./partials/header')%>
+    <%- include('./partials/navbar')%>
+
+
+        <div class="container mt-3">
+            <h1>
+                <%=blog.title%>
+            </h1>
+
+            <small>Written by <strong>
+                    <%=blog.author%>
+                </strong></small>
+
+            <p>
+                <%=blog.description%>
+            </p>
+            <a href=<%=`/blogs/${blog._id}/edit`%> ><button type="button"
+                    class="btn btn-secondary mb-3">Edit</button></a>
+            <br>
+            <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+            </form>
+
+
+        </div>
+
+
+
+
+
+
+        <%- include('./partials/footer')%>
